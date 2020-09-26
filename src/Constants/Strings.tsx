@@ -24,6 +24,7 @@ export const skillListStrings = {
 }
 
 export const footerStrings = {
+  codeUrl: "https://github.com/jeremyswerdlow/rs-skills-dashboard",
   siteUrl: "https://jeremyswerdlow.github.io/about",
   text: "Jeremy Swerdlow",
 }

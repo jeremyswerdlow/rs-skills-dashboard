@@ -9,9 +9,20 @@ const StyledBottomDiv = styled.div`
   width: 100%;
 `;
 
+type FooterLinkProps = {
+  link: string,
+}
+
+const FooterLink: FC<FooterLinkProps> = (props) => {
+  return(
+    <a href={props.link}>{props.children}</a>
+  );
+}
+
 type FooterProps = {
   strings: {
     siteUrl: string,
+    codeUrl: string,
     text: string,
   }
 };
@@ -27,18 +38,11 @@ export const Footer: FC<FooterProps> = (props) => {
           borderTop: "solid 1px rgb(23, 125, 220)",
         }}
       >
-        <Typography.Text
-          style={{ color: "rgb(23, 125, 220)", padding: "10px" }}
-        >
+        <Typography.Text style={{ color: "rgb(23, 125, 220)", padding: "10px" }}>
           {'Copyright © '}
-          <a
-            href={props.strings.siteUrl}
-            style={{ textDecoration: "none", color: "inherit" }}
-          >
-            {props.strings.text}
-          </a>{' '}
-          {new Date().getFullYear()}
-          {'.'}
+          <FooterLink link={props.strings.siteUrl}>{props.strings.text}</FooterLink>
+          {' '} {new Date().getFullYear()} {'. See the '}
+          <FooterLink link={props.strings.codeUrl}>{'source code here.'}</FooterLink>
         </Typography.Text>
       </Card>
     </StyledBottomDiv>

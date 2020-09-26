@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/rs-skills-dashboard/precache-manifest.feffd10d2f1b3fcadcb3ce8b96566282.js"
+  "/rs-skills-dashboard/precache-manifest.0c7099f322237ce604d08e947e36ac7b.js"
 );
 
 self.addEventListener('message', (event) => {
